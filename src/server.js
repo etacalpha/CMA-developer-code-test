@@ -1,6 +1,6 @@
-const path = require('path');
-const express = require('express');
-const app = express();
+var path = require('path');
+var express = require('express');
+var app = express();
 
 // Serve static files
 app.use(express.static(__dirname + '/dist/cma-gallery'));
@@ -13,8 +13,5 @@ app.get('/*', function(req, res) {
 // default Heroku port
 app.listen(process.env.PORT || port);
 
-// Heroku automagically gives us SSL
-// Lets write some middleware to redirect us
-var env = process.env.NODE_ENV || 'development';
 
 
