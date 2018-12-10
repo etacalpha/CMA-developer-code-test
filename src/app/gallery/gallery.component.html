@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="container">
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='American Painting and Sculptor'" (click)="filterBy='American Painting and Sculpture'">American Painting and Sculpture</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Chinese Art'" (click)="filterBy='Chinese Art'">Chinese Art</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Contemporary Art'" (click)="filterBy='Contemporary Art'">Contemporary Art</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Decorative Art'" (click)="filterBy='Decorative Art and Design'">Decorative Art and Design</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Drawings'" (click)="filterBy='Drawings'">Drawings</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='European Painting and Sculptor'" (click)="filterBy='European Painting and Sculpture'">European Painting and Sculpture</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Indian and South East Asian Art'" (click)="filterBy='Indian and South East Asian Art'">Indian and South East Asian Art</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Japanese Art'" (click)="filterBy='Japanese Art'">Japanese Art</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Medieval Art'" (click)="filterBy='Medieval Art'">Medieval Art</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Photography'" (click)="filterBy='Photography'">Photography</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Prints'" (click)="filterBy='Prints'">Prints</button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Textiles'" (click)="filterBy='Textiles'">Textiles </button>
+  <button class=" btn btn-lg btn-info" [class.active]="filterBy=='Modern European Painting and Sculptor'" (click)="filterBy='Modern European Painting and Sculpture'">Modern European Painting and Sculpture</button>
+  </div>
+    <ul id="thumbnailList">
+    <li *ngFor = "let image of (visibleImages | filter:filterBy)">
+      <a [routerLink]="['/image',image.artworkID]"> <img class="tn" width="200" height="160" src="../../assets/images/{{image.artworkPhoto}}_reduced.jpg" alt="image from Cleveland Museum of Art"></a>
+    </li>
+  </ul>
+</div>
+
+
+
+

@@ -1,0 +1,34 @@
+.contained{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+  " img img . . . ."
+  " img img info info info info"
+  " img img info info info info"
+  " img img . . . ."
+  " tombstone tombstone . . . .";
+  grid-gap: 20px;
+  width: 1000px;
+  margin: auto;
+}
+
+img{
+  height: 100%;
+}
+
+#img{
+grid-area: img;
+}
+#tombstone{
+grid-area: tombstone;
+}
+#info{
+  grid-area: info;
+}
+.img-container{
+  box-shadow: #555 1px 2px 8px 1px;
+
+}
+
+
